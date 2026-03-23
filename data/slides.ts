@@ -1,3 +1,5 @@
+export type SlideLayout = 'center' | 'image-right' | 'image-left' | 'image-full' | 'image-top'
+
 export interface SlideData {
   id: string
   title: string
@@ -9,6 +11,9 @@ export interface SlideData {
   icon?: string
   accent?: string
   note?: string
+  image?: string
+  imageAlt?: string
+  layout?: SlideLayout
 }
 
 export const slides: SlideData[] = [
@@ -23,6 +28,9 @@ export const slides: SlideData[] = [
     ],
     background: 'cosmos',
     accent: '#0078d4',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+    imageAlt: 'Futuristic blue digital globe with glowing network connections',
+    layout: 'image-full',
   },
   {
     id: 'cloud-complexity',
@@ -37,6 +45,9 @@ export const slides: SlideData[] = [
     ],
     background: 'chaos',
     accent: '#ff4444',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+    imageAlt: 'Dense server room with tangled cables and blinking lights',
+    layout: 'image-right',
   },
   {
     id: 'ai-vision',
@@ -51,6 +62,9 @@ export const slides: SlideData[] = [
     ],
     background: 'galaxy',
     accent: '#50e6ff',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+    imageAlt: 'Glowing neural network visualization with AI brain concept',
+    layout: 'image-left',
   },
   {
     id: 'openclaw-intro',
@@ -65,6 +79,9 @@ export const slides: SlideData[] = [
     ],
     background: 'particles',
     accent: '#0078d4',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
+    imageAlt: 'Diverse team of developers collaborating on open source project',
+    layout: 'image-right',
   },
   {
     id: 'architecture',
@@ -79,6 +96,9 @@ export const slides: SlideData[] = [
     ],
     background: 'network',
     accent: '#00bcf2',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
+    imageAlt: 'Close-up of a circuit board with glowing traces and microchips',
+    layout: 'image-left',
   },
   {
     id: 'healthcare-demo',
@@ -93,6 +113,9 @@ export const slides: SlideData[] = [
     ],
     background: 'dna',
     accent: '#00cc6a',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    imageAlt: 'Modern medical technology with digital health interface',
+    layout: 'image-right',
   },
   {
     id: 'chat-to-deploy',
@@ -107,6 +130,9 @@ export const slides: SlideData[] = [
     ],
     background: 'flow',
     accent: '#0078d4',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
+    imageAlt: 'Developer typing code on a laptop with terminal visible',
+    layout: 'image-left',
   },
   {
     id: 'incident-response',
@@ -121,6 +147,9 @@ export const slides: SlideData[] = [
     ],
     background: 'pulse',
     accent: '#ff8c00',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    imageAlt: 'Data monitoring dashboard with charts and alert indicators',
+    layout: 'image-right',
   },
   {
     id: 'finops-demo',
@@ -135,6 +164,9 @@ export const slides: SlideData[] = [
     ],
     background: 'coins',
     accent: '#ffd700',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+    imageAlt: 'Financial analytics dashboard with charts and data visualization',
+    layout: 'image-left',
   },
   {
     id: 'manufacturing-iot',
@@ -149,6 +181,9 @@ export const slides: SlideData[] = [
     ],
     background: 'grid',
     accent: '#00bcf2',
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80',
+    imageAlt: 'Robotic arms on a modern factory assembly line',
+    layout: 'image-right',
   },
   {
     id: 'multi-agent',
@@ -163,6 +198,9 @@ export const slides: SlideData[] = [
     ],
     background: 'orbits',
     accent: '#8b5cf6',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+    imageAlt: 'Network of interconnected glowing nodes representing multi-agent system',
+    layout: 'image-left',
   },
   {
     id: 'security',
@@ -177,6 +215,9 @@ export const slides: SlideData[] = [
     ],
     background: 'shield',
     accent: '#00cc6a',
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80',
+    imageAlt: 'Digital cybersecurity shield with lock and encrypted data',
+    layout: 'image-right',
   },
   {
     id: 'clawhub',
@@ -191,6 +232,9 @@ export const slides: SlideData[] = [
     ],
     background: 'hexgrid',
     accent: '#e040fb',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
+    imageAlt: 'Digital marketplace interface with colorful app icons',
+    layout: 'image-left',
   },
   {
     id: 'bicep-example',
@@ -228,6 +272,9 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-07-01' = {
     ],
     background: 'matrix',
     accent: '#0078d4',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
+    imageAlt: 'Lines of code on a dark screen with syntax highlighting',
+    layout: 'image-top',
   },
   {
     id: 'cli-example',
@@ -256,6 +303,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'terminal',
     accent: '#00bcf2',
+    image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&q=80',
+    imageAlt: 'Terminal window with command line interface on dark background',
+    layout: 'image-top',
   },
   {
     id: 'deployment-flow',
@@ -270,6 +320,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'pipeline',
     accent: '#0078d4',
+    image: 'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=800&q=80',
+    imageAlt: 'Rocket launching into sky representing deployment pipeline',
+    layout: 'image-right',
   },
   {
     id: 'developer-productivity',
@@ -284,6 +337,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'cubes',
     accent: '#50e6ff',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80',
+    imageAlt: 'Developer working at a modern desk with multiple monitors',
+    layout: 'image-left',
   },
   {
     id: 'integrations',
@@ -298,6 +354,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'connections',
     accent: '#00bcf2',
+    image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=800&q=80',
+    imageAlt: 'Colorful puzzle pieces connecting together representing integrations',
+    layout: 'image-right',
   },
   {
     id: 'enterprise',
@@ -312,6 +371,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'fortress',
     accent: '#0078d4',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+    imageAlt: 'Modern corporate glass skyscraper reflecting the sky',
+    layout: 'image-left',
   },
   {
     id: 'meta-demo',
@@ -326,6 +388,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'inception',
     accent: '#8b5cf6',
+    image: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800&q=80',
+    imageAlt: 'Abstract recursive spiral pattern representing inception and self-reference',
+    layout: 'image-full',
   },
   {
     id: 'startup-accelerator',
@@ -340,6 +405,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'rocket',
     accent: '#ff8c00',
+    image: 'https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&q=80',
+    imageAlt: 'Modern startup office with collaborative workspace and whiteboards',
+    layout: 'image-right',
   },
   {
     id: 'roadmap',
@@ -354,6 +422,9 @@ az openclaw deploy "Create a Redis cache with
     ],
     background: 'timeline',
     accent: '#50e6ff',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
+    imageAlt: 'Winding road stretching into a misty horizon at sunrise',
+    layout: 'image-full',
   },
   {
     id: 'getting-started',
@@ -380,6 +451,9 @@ openclaw chat
     ],
     background: 'launchpad',
     accent: '#00cc6a',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
+    imageAlt: 'Team onboarding with laptops on a bright modern desk',
+    layout: 'image-top',
   },
   {
     id: 'community',
@@ -394,6 +468,9 @@ openclaw chat
     ],
     background: 'wave',
     accent: '#e040fb',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
+    imageAlt: 'Diverse group of people at a tech community conference event',
+    layout: 'image-right',
   },
   {
     id: 'qa',
@@ -409,5 +486,8 @@ openclaw chat
     background: 'cosmos',
     accent: '#0078d4',
     note: 'Rajkumar Balakrishnan — Microsoft Netherlands TechFest 2026',
+    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80',
+    imageAlt: 'Microphone on stage with blurred audience in background',
+    layout: 'image-full',
   },
 ]
