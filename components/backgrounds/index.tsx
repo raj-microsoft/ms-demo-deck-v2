@@ -2,6 +2,7 @@
 
 import { Suspense, type ComponentType } from 'react'
 import { Canvas } from '@react-three/fiber'
+import { useTheme } from 'next-themes'
 import {
   CosmosScene,
   ChaosScene,
@@ -58,6 +59,8 @@ const sceneMap: Record<string, ComponentType> = {
 
 export function Background3D({ type }: { type: string }) {
   const Scene = sceneMap[type] || CosmosScene
+  const { theme } = useTheme()
+  const bgColor = theme === 'dark' ? '#020617' : '#e8edf4'
 
   return (
     <Canvas
@@ -72,9 +75,9 @@ export function Background3D({ type }: { type: string }) {
       camera={{ position: [0, 0, 5] }}
       gl={{ alpha: true, antialias: true }}
     >
-      <color attach="background" args={['transparent']} />
-      <ambientLight intensity={0.3} />
-      <pointLight position={[5, 5, 5]} intensity={0.5} />
+      <color attach="background" args={[bgColor]} />
+      <ambientLight intensity={theme === 'dark' ? 0.3 : 0.6} />
+      <pointLight position={[5, 5, 5]} intensity={theme === 'dark' ? 0.5 : 0.8} />
       <Suspense fallback={null}>
         <Scene />
       </Suspense>
