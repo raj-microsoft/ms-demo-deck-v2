@@ -132,6 +132,15 @@ export function DeckShell() {
         <div className="fixed right-4 top-4">
           <ThemeToggle />
         </div>
+        <a
+          href="https://ms-demo-deck-v2.azurestaticapps.net"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed left-4 top-4 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm transition-colors hover:bg-black/50 hover:text-white"
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse" />
+          Live App
+        </a>
       </div>
     </div>
   )

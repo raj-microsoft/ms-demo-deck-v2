@@ -180,6 +180,7 @@ export const slides: SlideData[] = [
       '25 slides with animated 3D backgrounds',
       'Deployed to Azure Static Web Apps in one command',
       'Total human input: one Telegram message',
+      '🔗 Live: ms-demo-deck-v2.azurestaticapps.net',
     ],
     background: 'inception',
     accent: '#8b5cf6',
