@@ -235,12 +235,12 @@ export function Slide({ data, isActive, direction }: SlideProps) {
     )
 
     const contentPanel = (
-      <div className="flex w-full flex-col items-center justify-center px-6 md:w-3/5 md:items-start md:px-10">
+      <div className="flex w-full flex-col items-center justify-center px-6 md:w-3/5 md:px-10">
         <motion.h1
           variants={titleVariants}
           initial="hidden"
           animate="visible"
-          className="gradient-text mb-4 text-center text-3xl font-bold md:text-left md:text-5xl"
+          className="gradient-text mb-4 text-center text-3xl font-bold md:text-5xl"
         >
           {data.title}
         </motion.h1>
@@ -249,7 +249,7 @@ export function Slide({ data, isActive, direction }: SlideProps) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
-            className="mb-6 max-w-xl text-center text-base text-muted-foreground md:text-left md:text-lg"
+            className="mb-6 max-w-xl text-center text-base text-muted-foreground md:text-lg"
           >
             {data.subtitle}
           </motion.p>
